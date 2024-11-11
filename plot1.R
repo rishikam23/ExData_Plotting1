@@ -5,7 +5,7 @@ View(data)
 # Subsetting the dataset
 data=data[data$Date %in% c("1/2/2007","2/2/2007"),]
 
-# Converting Date and Time
+# Combining Date and Time into a single Date-Time object
 data$DateTime=as.POSIXct(paste(data$Date,data$Time),format="%d/%m/%Y %H:%M:%S")
 View(data)
 
